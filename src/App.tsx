@@ -170,25 +170,26 @@ export default function App() {
   const pendingFinancialCount = financial.filter(f => f.status === 'Em aberto' || f.status === 'Vencido').length;
 
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-800 flex flex-col font-sans antialiased w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen bg-slate-100 text-slate-800 flex flex-col font-sans antialiased w-full max-w-full overflow-x-clip">
       
-      {/* Top Header */}
-      <Header
-        patients={patients}
-        activeView={activeTab}
-        setActiveView={setActiveTab}
-        selectedStudentId={selectedStudentId}
-        setSelectedStudentId={setSelectedStudentId}
-        onSelectPatientDetails={handleOpenPatientDetails}
-        onResetDemoData={handleResetDemoData}
-      />
+      {/* Top Header & Navigation Bar (Fixed / Sticky on Scroll) */}
+      <div className="sticky top-0 z-40 w-full shadow-md">
+        <Header
+          patients={patients}
+          activeView={activeTab}
+          setActiveView={setActiveTab}
+          selectedStudentId={selectedStudentId}
+          setSelectedStudentId={setSelectedStudentId}
+          onSelectPatientDetails={handleOpenPatientDetails}
+          onResetDemoData={handleResetDemoData}
+        />
 
-      {/* Primary Tab Navigation */}
-      <Navigation
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        pendingInvoicesCount={pendingFinancialCount}
-      />
+        <Navigation
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          pendingInvoicesCount={pendingFinancialCount}
+        />
+      </div>
 
       {/* Main Content Workspace */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-2 sm:px-6 lg:px-8 py-4 sm:py-6">

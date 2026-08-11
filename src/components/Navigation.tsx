@@ -49,7 +49,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   };
 
   return (
-    <nav className="bg-slate-900 text-slate-300 shadow-md sticky top-16 z-20">
+    <nav className="bg-slate-900 text-slate-300 shadow-md w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Mobile Header Bar with Hamburger Toggle */}
