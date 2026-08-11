@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Pilates Pro Gestão",
+  "description": "Plataforma completa para gestão clínica e financeira de Pilates, com controle de presenças, avaliações e dashboards administrativos intuitivos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
